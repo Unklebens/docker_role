@@ -51,13 +51,6 @@
    sudo systemctl enable docker
    sudo systemctl start docker
    
-   # install python and dependancies for future use
-   sudo yum install python3 -y
-   sudo yum install python3-pip -y
-   sudo pip3 install docker-py
-   
-
-
 {% else %}
    echo 'Distribution pas prise en charge'
 {% endif %}
