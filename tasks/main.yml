@@ -5,6 +5,19 @@
     src: "install_docker.sh.j2"
     dest: "/home/{{ ansible_user }}/install_docker.sh"
 
+- name: download pip script
+  get_url:
+    url: https://bootstrap.pypa.io/pip/2.7/get-pip.py
+    dest: /tmp/get-pip.py
+
+- name: install python-pip
+  command: python2.7 /tmp/get-pip.py
+  when: ansible_distribution == "CentOS"
+
+- name: Install docker python
+  pip: name=docker-py
+  when: ansible_distribution == "CentOS"
+
 - name: "run the script"
   ansible.builtin.command: "/bin/bash /home/{{ ansible_user }}/install_docker.sh"
   when: ansible_docker0 is undefined

@@ -1,0 +1,8 @@
+- name: "push script file"
+  template:
+    src: "install_docker.sh.j2"
+    dest: "/home/{{ ansible_user }}/install_docker.sh"
+
+- name: "run the script"
+  ansible.builtin.command: "/bin/bash /home/{{ ansible_user }}/install_docker.sh"
+  when: ansible_docker0 is undefined
