@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  remote_user: root
+  become: true
+  vars:
+    ansible_connection: local
+  vars_files:
+    - files/secret.yaml
+  roles:
+    - docker_role

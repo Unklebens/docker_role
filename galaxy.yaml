@@ -1,0 +1,18 @@
+---
+namespace: community
+name: docker-role
+version: 1.0.0
+readme: README.md
+authors:
+  - Fahim KASSAMALY
+  - Frazer SADO (for inspiration and structure)
+description: Install docker
+license_file: COPYING
+tags:
+  - v1
+repository: https://github.com/Unklebens/docker_role.git
+documentation: https://github.com/Unklebens/docker_role.git
+homepage: https://github.com/Unklebens/docker_role.git
+issues: https://github.com/Unklebens/docker_role.git
+build_ignore:
+  - .gitignore

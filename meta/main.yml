@@ -1,0 +1,6 @@
+---
+galaxy_info:
+  role_name: docker_role
+  author: Fahim
+  description: Ansible docker role
+  company: FKDS
